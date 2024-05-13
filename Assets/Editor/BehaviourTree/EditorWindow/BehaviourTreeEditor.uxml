@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/BehaviourTree/EditorWindow/BehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=8aad58cc6a462be4db24e0d304033da6&amp;type=3#BehaviourTreeEditor" />
+    <BehaviourTreeDesigner.SplitView fixed-pane-initial-dimension="250" name="SplitView">
+        <ui:VisualElement name="left-panel" style="flex-grow: 1; background-color: rgb(56, 56, 56);">
+            <uie:Toolbar name="ConfigToolbar">
+                <uie:ToolbarButton text="Inspector" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InspectorButton" />
+            </uie:Toolbar>
+            <BehaviourTreeDesigner.InspectorView />
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="flex-grow: 1;">
+            <uie:Toolbar>
+                <ui:TextField picking-mode="Ignore" label="File Name" value="NewBehaviourTree" name="NewFileTextField" />
+                <uie:ToolbarButton text="New Behaviour Tree" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewBehaviourButton" />
+            </uie:Toolbar>
+            <BehaviourTreeDesigner.BehaviourTreeView style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </BehaviourTreeDesigner.SplitView>
+</ui:UXML>

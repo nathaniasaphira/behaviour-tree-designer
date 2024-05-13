@@ -1,0 +1,348 @@
+.node {
+    width: auto;
+    height: auto;
+}
+
+#node-border {
+    background-color: rgb(66, 66, 66);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-width: auto;
+    min-height: auto;
+    align-self: auto;
+    align-items: stretch;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+}
+
+#input {
+    align-items: center;
+    align-self: center;
+    min-width: auto;
+    background-color: rgb(76, 76, 76);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#output {
+    align-items: center;
+    align-self: center;
+    background-color: rgb(76, 76, 76);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#selection-border {
+    border-left-color: rgb(51, 86, 124);
+    border-right-color: rgb(51, 86, 124);
+    border-top-color: rgb(51, 86, 124);
+    border-bottom-color: rgb(51, 86, 124);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+:selected #selection-border {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(51, 86, 124);
+    border-right-color: rgb(51, 86, 124);
+    border-top-color: rgb(51, 86, 124);
+    border-bottom-color: rgb(51, 86, 124);
+}
+
+:hover:selected #selection-border {
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-left-color: rgb(51, 86, 124);
+    border-right-color: rgb(51, 86, 124);
+    border-top-color: rgb(51, 86, 124);
+    border-bottom-color: rgb(51, 86, 124);
+}
+
+#title {
+    -unity-font-style: bold;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+#divider {
+    min-height: 1px;
+    background-color: rgba(255, 255, 255, 0.59);
+}
+
+.root #node-border {
+    background-color: rgb(130, 110, 110);
+}
+
+.decorator #node-border {
+    background-color: rgb(119, 127, 149);
+}
+
+.composite #node-border {
+    background-color: rgb(151, 149, 132);
+}
+
+.action #node-border {
+    background-color: rgb(132, 122, 136);
+    background-image: none;
+}
+
+.conditional #node-border {
+    background-color: rgb(126, 155, 165);
+}
+
+.running #node-border {
+    background-color: rgb(60, 155, 75);
+}
+
+.success .failure #node-border {
+    background-color: rgb(66, 66, 66);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-width: auto;
+    min-height: 50px;
+    align-self: auto;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.port {
+    width: 50px;
+    height: auto;
+}
+
+#task-icon {
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 40px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.root #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/root-icon.png?fileID=21300000&guid=cde85e9f139699e448964dbfab043ea0&type=3#root-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.conditional #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/conditional-icon.png?fileID=21300000&guid=eedcf73fc4d99ca41949f752edf1fde9&type=3#conditional-icon");
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 40px;
+}
+
+.action #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/action-icon.png?fileID=21300000&guid=dd1f0dc8a541f2540989d25209a282ea&type=3#action-icon");
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+.repeat #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/repeat-icon.png?fileID=21300000&guid=50bef262c0db1284c9ef73fc744ea756&type=3#repeat-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.sequence #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/sequence-icon.png?fileID=21300000&guid=b5b995d1c0ef44f4cb521f99cd16f4fe&type=3#sequence-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+}
+
+.selector #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/selector-icon.png?fileID=21300000&guid=f55c1ccbe97c45449b73b00309cc73e3&type=3#selector-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wait #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/wait-icon.png?fileID=21300000&guid=f537737515bf2c648ac562c4a858cce9&type=3#wait-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.log #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/log-icon.png?fileID=21300000&guid=a11e20a9285f26c4f8885ed7785d5702&type=3#log-icon");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55px;
+}
+
+.returnfailure #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/return-fail.png?fileID=21300000&guid=c244a8e8e25cd5d4f94b9ef6f6c0182c&type=3#return-fail");
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.returnsuccess #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/return-success-icon.png?fileID=21300000&guid=08e315a6fc030f040a6671e9ddc80755&type=3#return-success-icon");
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inverter #task-icon {
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/inverter-icon.png?fileID=21300000&guid=b283749d5f520cd4899988b1342553b4&type=3#inverter-icon");
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#state-icon {
+    height: 20px;
+    width: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-image: none;
+    align-self: flex-end;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.success #state-icon {
+    height: 20px;
+    width: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/return-success-icon.png?fileID=21300000&guid=08e315a6fc030f040a6671e9ddc80755&type=3#return-success-icon");
+    align-self: flex-end;
+    -unity-background-image-tint-color: rgba(65, 134, 68, 0.59);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.failure #state-icon {
+    height: 20px;
+    width: 20px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-image: url("project://database/Assets/Editor/BehaviourTree/Icons/return-fail.png?fileID=21300000&guid=c244a8e8e25cd5d4f94b9ef6f6c0182c&type=3#return-fail");
+    align-self: flex-end;
+    -unity-background-image-tint-color: rgba(232, 61, 61, 0.59);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
