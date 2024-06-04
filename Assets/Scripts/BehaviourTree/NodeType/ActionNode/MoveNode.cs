@@ -20,7 +20,7 @@ namespace BehaviourTreeDesigner
 
         private void Move()
         {
-            sharedData.ThisObject.transform.position = destination;
+            Debug.Log("Move!");
         }
     }
 }

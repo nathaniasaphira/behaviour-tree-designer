@@ -20,7 +20,7 @@ namespace BehaviourTreeDesigner
 
         private void Attack()
         {
-            throw new NotImplementedException();
+            Debug.Log("Attack!");
         }
     }
 }

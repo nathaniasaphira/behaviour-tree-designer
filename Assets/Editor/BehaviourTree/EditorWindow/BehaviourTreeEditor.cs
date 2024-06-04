@@ -29,7 +29,7 @@ namespace BehaviourTreeDesigner
             window.titleContent = new GUIContent(WindowTitle);
         }
 
-        [OnOpenAsset]
+        [OnOpenAsset()]
         public static bool OnOpenAsset(int instanceId, int line)
         {
             OpenEditorWindow();
